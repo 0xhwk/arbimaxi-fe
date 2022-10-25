@@ -316,7 +316,7 @@ button:hover {
 .about-img {
   height: 10%;
 }
-/* CAROUSEL */
+/* CAROUSEL -----------------------*/
 
 .carousel-item {
   min-height: 20vh;
@@ -343,6 +343,7 @@ button:hover {
 
   background-image: initial;
   background-color: transparent;
+  padding-bottom: 10%;
 }
 
 /*  ROADMAP  -------------------------------------- */
@@ -411,7 +412,7 @@ button:hover {
   width: 50%;
   height: 100%;
   padding: 1% 5%;
-  padding-top: 15%;
+  padding-top: 10%;
 
   background-color: rgba(0, 0, 0, 0.35);
 }
@@ -424,12 +425,12 @@ button:hover {
   height: 100%;
   width: 50%;
   padding: 1% 5%;
+
   background-color: rgba(0, 0, 0, 0.35);
 }
 .roadmap-item {
   color: var(--bright-blue);
   width: 100%;
-
   margin: 20% 0;
   padding: 3%;
   background-image: initial;
@@ -556,6 +557,7 @@ button:hover {
   margin-bottom: 2%;
 }
 .team-row {
+  padding: 12%;
   display: flex;
   justify-content: space-around;
 }

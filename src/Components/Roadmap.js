@@ -9,6 +9,7 @@ const Roadmap = () => {
         <motion.div
           initial={{ x: -300 }}
           whileInView={{ x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 2 }}
           className="roadmap-left"
         >
@@ -32,6 +33,7 @@ const Roadmap = () => {
         <motion.div
           initial={{ x: 500 }}
           whileInView={{ x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 3 }}
           className="roadmap-right"
         >
