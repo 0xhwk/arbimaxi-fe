@@ -12,9 +12,9 @@ const About = () => {
         whileInView={{ y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
       >
-        <div className="about-title">A love letter, a tribute...</div>
         <div className="about-content">
           <p className="about-text">
+            <div className="about-title">A love letter, a tribute...</div>
             <p className="about-header">
               4441 unique ArbiMaxi will be released on Arbitrum.
             </p>

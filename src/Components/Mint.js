@@ -24,9 +24,9 @@ const Mint = () => {
     <div className="mint-bg">
       <div className="mint-container">
         <div className="mint-content">
-          <h1>MAX</h1>
-          <h1>MAXI</h1>
-          <h1>ARBIMAXI</h1>
+          <h1 className="mint-max">MAX</h1>
+          <h1 className="mint-maxi">MAXI</h1>
+          <h1 className="mint-arbimaxi">ARBIMAXI</h1>
 
           {contractAddress ? (
             <>

@@ -31,10 +31,10 @@ const Roadmap = () => {
         </motion.div>
         <div className="roadmap-divider"></div>
         <motion.div
-          initial={{ x: 500 }}
+          initial={{ x: 400 }}
           whileInView={{ x: 0 }}
+          transition={{ duration: 2 }}
           viewport={{ once: true }}
-          transition={{ duration: 3 }}
           className="roadmap-right"
         >
           <div className="roadmap-item">
