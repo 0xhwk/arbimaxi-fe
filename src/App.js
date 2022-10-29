@@ -8,14 +8,6 @@ import Footer from "./Components/Footer";
 import Team from "./Components/Team";
 
 function App() {
-  //   <motion.a
-  //   href="https://discord.gg/aasTeCBM"
-  //   target="_blank"
-  //   animate={{ rotate: [0, 360, 0, 0, 0, 0] }}
-  //   transition={{ repeat: Infinity, duration: 3 }}
-  //   className="fa-brands fa-discord about-logo"
-  // ></motion.a>
-
   return (
     <>
       <Header />

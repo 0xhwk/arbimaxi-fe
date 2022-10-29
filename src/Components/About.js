@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
+import Scroll from "react-scroll";
+
 import { c1 } from "../Images";
 import Carousel from "./Carousel";
 import "../App.css";
 
 const About = () => {
+  const Element = Scroll.Element;
   return (
-    <div className="about-container">
+    <Element name="about" className="about-container">
       <motion.div
         initial={{ y: 100 }}
         transition={{ type: "spring", bounce: 0.4, duration: 3 }}
@@ -13,8 +16,8 @@ const About = () => {
         viewport={{ once: true, amount: 0.1 }}
       >
         <div className="about-content">
-          <p className="about-text">
-            <div className="about-title">A love letter, a tribute...</div>
+          <div className="about-text">
+            <p className="about-title">A love letter, a tribute...</p>
             <p className="about-header">
               4441 unique ArbiMaxi will be released on Arbitrum.
             </p>
@@ -23,12 +26,12 @@ const About = () => {
               solution and have been using it since the beginning. So we
               launched ArbiMaxi with the motto "Together Stronger".
             </p>
-          </p>
-          <img src={c1}></img>
+          </div>
+          <img loading="lazy" src={c1}></img>
         </div>
       </motion.div>
       <Carousel />
-    </div>
+    </Element>
   );
 };
 

@@ -1,110 +1,116 @@
-import { useEffect } from "react";
-import { useMoralis } from "react-moralis";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Scroll from "react-scroll";
 
 import "../App.css";
 import { logo } from "../Images";
+import Connect from "./Connect";
 
 const Header = () => {
   const scroll = Scroll.animateScroll;
+  const scroller = Scroll.scroller;
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollTop, setScrollTop] = useState(false);
   const scrollTo = (height) => {
     return scroll.scrollTo(height);
   };
-  const {
-    enableWeb3,
-    account,
-    isWeb3Enabled,
-    isWeb3EnableLoading,
-    deactivateWeb3,
-    Moralis,
-  } = useMoralis();
 
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
   useEffect(() => {
-    if (isWeb3Enabled) return;
-    if (window.localStorage.getItem("connected")) enableWeb3();
-  }, [isWeb3Enabled]);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-  useEffect(() => {
-    Moralis.onAccountChanged((account) => {
-      if (account == null) {
-        window.localStorage.removeItem("connected");
-        deactivateWeb3();
-      }
-    });
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
+
+  const mobileScroll = () => {
+    if (scrollPosition < 601)
+      return scroller.scrollTo("about", { smooth: true });
+    if (601 < scrollPosition && scrollPosition < 1719)
+      return scroller.scrollTo("roadmap", { smooth: true });
+    if (1719 < scrollPosition && scrollPosition < 2325) {
+      setScrollTop(true);
+      return scroller.scrollTo("team", { smooth: true });
+    }
+    if (scrollTop) return scroll.scrollToTop({ smooth: true });
+  };
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 1.5 }}
-      className="header"
-    >
-      <img
-        onClick={() => scrollTo(0)}
-        className="logo"
-        src={logo}
-        alt="logo"
-      ></img>
-      <motion.nav
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 4 }}
+    <>
+      {window.screen.availWidth < 820 ? (
+        scrollPosition > 2100 ? (
+          <button
+            onClick={() => mobileScroll()}
+            className="fa-solid fa-circle-arrow-up"
+          ></button>
+        ) : (
+          <button
+            onClick={() => mobileScroll()}
+            className="fa-solid fa-circle-arrow-down"
+          ></button>
+        )
+      ) : null}
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1.5 }}
+        className="header"
       >
-        <ul className="nav-links">
-          <div className="nav-links-left">
-            <button onClick={() => scrollTo(753)} className="header-button">
-              About
-            </button>
-
-            <button onClick={() => scrollTo(1517)} className="header-button">
-              Roadmap
-            </button>
-
-            <button onClick={() => scrollTo(2775)} className="header-button">
-              Collection
-            </button>
-          </div>
-          <div className="nav-links-right">
-            <a
-              href="https://twitter.com/0xNugen"
-              className="fa-brands fa-twitter nav-socials-logo "
-            ></a>
-            <a
-              href="https://discord.gg/aasTeCBM"
-              className="fa-brands fa-discord nav-socials-logo "
-            ></a>
-
-            {!account ? (
-              isWeb3EnableLoading ? (
-                <button className="connect-button">
-                  <motion.i
-                    animate={{ rotate: [0, 385, -385] }}
-                    transition={{ repeat: Infinity, duration: 2 }}
-                    className="fa-solid fa-rotate"
-                  ></motion.i>
-                </button>
-              ) : (
+        <img
+          onClick={() => scrollTo(0)}
+          className="logo"
+          src={logo}
+          alt="logo"
+        ></img>
+        <motion.nav
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 4 }}
+        >
+          <ul className="nav-links">
+            {window.screen.availWidth < 800 ? null : (
+              <div className="nav-links-left">
                 <button
-                  className="connect-button"
-                  onClick={async () => {
-                    await enableWeb3();
-                    window.localStorage.setItem("connected", "injected");
-                  }}
+                  onClick={() => scroller.scrollTo("about", { smooth: true })}
+                  className="header-button"
                 >
-                  Connect Wallet
+                  About
                 </button>
-              )
-            ) : (
-              <button className="connect-button">
-                {account.slice(0, 6)}...{account.slice(account.length - 4)}
-              </button>
+
+                <button
+                  onClick={() => scroller.scrollTo("roadmap", { smooth: true })}
+                  className="header-button"
+                >
+                  Roadmap
+                </button>
+
+                <button
+                  onClick={() => scroller.scrollTo("team", { smooth: true })}
+                  className="header-button"
+                >
+                  Team
+                </button>
+              </div>
             )}
-          </div>
-        </ul>
-      </motion.nav>
-    </motion.header>
+            <div className="nav-links-right">
+              <a
+                href="https://twitter.com/0xNugen"
+                className="fa-brands fa-twitter nav-socials-logo "
+              ></a>
+              <a
+                href="https://discord.gg/aasTeCBM"
+                className="fa-brands fa-discord nav-socials-logo "
+              ></a>
+              <Connect />
+            </div>
+          </ul>
+        </motion.nav>
+      </motion.header>
+    </>
   );
 };
 

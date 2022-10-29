@@ -1,6 +1,9 @@
 import hero from "./hero.png";
 import logo from "./logo.png";
 import about from "./about.png";
+import bgnewyork from "./bg-new-york.png";
+import bgoffice from "./bg-office.png";
+import bgspace from "./bg-space.png";
 import c1 from "./1.png";
 import c2 from "./2.png";
 import c3 from "./3.png";
@@ -19,6 +22,9 @@ export {
   roadmapbg,
   logo,
   about,
+  bgnewyork,
+  bgoffice,
+  bgspace,
   c1,
   c2,
   c3,

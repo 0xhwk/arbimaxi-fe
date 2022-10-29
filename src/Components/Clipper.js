@@ -2,10 +2,6 @@ import "../App.css";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
-// initial={{ x: 0 }}
-// whileInView={{ x: 500 }}
-// transition={{ duration: 5 }}
-// viewport={{ once: true, amount: 0.1 }}
 const Clipper = () => {
   const ref = useRef(null);
   const { x, y } = useFollowPointer(ref);

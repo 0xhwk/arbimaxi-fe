@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
+import Scroll from "react-scroll";
 import "../App.css";
 
 const Roadmap = () => {
+  const Element = Scroll.Element;
   return (
     <>
-      {/* <div className="roadmap-title">ROADMAP</div> */}
-      <div className="roadmap-container">
+      <Element name="roadmap" className="roadmap-container">
         <motion.div
-          initial={{ x: -300 }}
+          initial={window.screen.availWidth < 800 ? { x: 0 } : { x: -300 }}
           whileInView={{ x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 2 }}
@@ -31,7 +32,7 @@ const Roadmap = () => {
         </motion.div>
         <div className="roadmap-divider"></div>
         <motion.div
-          initial={{ x: 400 }}
+          initial={window.screen.availWidth < 820 ? { x: 0 } : { x: 400 }}
           whileInView={{ x: 0 }}
           transition={{ duration: 2 }}
           viewport={{ once: true }}
@@ -52,7 +53,7 @@ const Roadmap = () => {
             </p>
           </div>
         </motion.div>
-      </div>
+      </Element>
     </>
   );
 };

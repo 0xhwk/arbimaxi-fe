@@ -30,7 +30,7 @@ const Mint = () => {
 
           {contractAddress ? (
             <>
-              <div className="mint-title">Mint your ArbiMaxi here : </div>
+              <div className="mint-title">Mint your ArbiMaxi here: </div>
 
               <motion.button
                 initial={{ y: 0, x: 0 }}
@@ -49,7 +49,7 @@ const Mint = () => {
           )}
         </div>
       </div>
-      <Clipper />
+      {window.screen.availWidth < 820 ? null : <Clipper />}
     </div>
   );
 };
