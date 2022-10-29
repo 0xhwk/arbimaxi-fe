@@ -2,8 +2,10 @@ import { useWeb3Contract } from "react-moralis";
 import { abi, contractAddresses } from "../Constants";
 import { useMoralis } from "react-moralis";
 import { motion } from "framer-motion";
+
 import "../App.css";
 import Clipper from "./Clipper";
+
 const Mint = () => {
   const { chainId: chainIdHex, isWeb3Enabled } = useMoralis();
   const chainId = parseInt(chainIdHex);

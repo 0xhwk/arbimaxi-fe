@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+
 import "../App.css";
 import { carouselArray } from "../Images";
 

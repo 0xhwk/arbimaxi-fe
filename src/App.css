@@ -351,15 +351,12 @@ button:hover {
 }
 .carousel-inner {
   display: flex;
-  /* background-color: var(--off-black); */
   background-image: initial;
   background-color: transparent;
 }
 .carousel {
   cursor: grab;
   overflow: hidden;
-  /* background-color: var(--off-black); */
-
   background-image: initial;
   background-color: transparent;
   padding-bottom: 10%;
