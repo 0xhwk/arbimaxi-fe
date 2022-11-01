@@ -45,12 +45,12 @@ const Header = () => {
         scrollPosition > 2100 ? (
           <button
             onClick={() => mobileScroll()}
-            className="fa-solid fa-circle-arrow-up"
+            className="fa-solid fa-circle-arrow-up mobile-button"
           ></button>
         ) : (
           <button
             onClick={() => mobileScroll()}
-            className="fa-solid fa-circle-arrow-down"
+            className="fa-solid fa-circle-arrow-down mobile-button"
           ></button>
         )
       ) : null}
@@ -98,11 +98,11 @@ const Header = () => {
             )}
             <div className="nav-links-right">
               <a
-                href="https://twitter.com/0xNugen"
+                href="https://twitter.com/Arbi_Maxi"
                 className="fa-brands fa-twitter nav-socials-logo "
               ></a>
               <a
-                href="https://discord.gg/aasTeCBM"
+                href="https://discord.gg/WgTzv6sR"
                 className="fa-brands fa-discord nav-socials-logo "
               ></a>
               <Connect />
