@@ -19,7 +19,7 @@ const About = () => {
           <div className="about-text">
             <p className="about-title">A love letter, a tribute...</p>
             <p className="about-header">
-              4441 unique ArbiMaxi will be released on Arbitrum.
+              4216 unique ArbiMaxi will be released on Arbitrum.
             </p>
             <p className="about-story">
               We believe that <span>Arbitrum</span> is the brightest Ethereum
