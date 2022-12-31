@@ -1,5 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
+/* 
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+*/
 :root {
   --white: #ceddef;
   --bright-blue: #5893d4;
@@ -177,11 +180,12 @@ button:hover {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: rgb(88, 147, 212);
+  background: rgb(0, 51, 102);
+  /* background: rgb(88, 147, 212); */
   background: -moz-linear-gradient(
     180deg,
-    rgba(88, 147, 212, 1) 0%,
-    rgba(31, 60, 136, 1) 70%,
+    rgb(230, 225, 225) 0%,
+    rgb(206, 205, 203) 70%,
     rgba(41, 43, 47, 1) 100%
   );
   background: -webkit-linear-gradient(
@@ -192,9 +196,9 @@ button:hover {
   );
   background: linear-gradient(
     180deg,
-    rgba(88, 147, 212, 1) 0%,
-    rgba(31, 60, 136, 1) 70%,
-    rgba(41, 43, 47, 1) 100%
+    rgb(0, 32, 64) 0%,
+    rgb(0, 32, 64) 70%,
+    rgb(0, 32, 64) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5893d4",endColorstr="#292b2f",GradientType=1);
 }
@@ -207,14 +211,14 @@ button:hover {
   height: 100%;
   padding-left: 50%;
   margin-top: 2%;
-  z-index: 9;
+  z-index: 5;
 }
 .mint-content h1 {
   display: inline-block;
-  text-shadow: 8px 6px 10px rgba(255, 255, 255, 0.128);
+  text-shadow: 8px 6px 8px rgba(255, 255, 255, 0.128);
   background: linear-gradient(
     to right,
-    var(--bright-blue) 0%,
+    var(--bright-blue) -30%,
     var(--white) 100%
   );
   background-clip: border-box;
@@ -222,14 +226,14 @@ button:hover {
   -webkit-text-fill-color: transparent;
 }
 .mint-max {
-  font-size: 800%;
+  font-size: 300%;
 }
 .mint-maxi {
   font-size: 500%;
 }
 .mint-arbimaxi {
-  font-size: 300%;
-  padding-top: 15px;
+  font-size: 600%;
+  margin-top: -15px;
 }
 .mint-button {
   width: 40%;
@@ -332,6 +336,10 @@ button:hover {
 }
 .about-img {
   height: 10%;
+}
+.about-container span {
+  color: var(--bright-blue);
+  font-weight: bold;
 }
 /* CAROUSEL -----------------------*/
 
@@ -471,7 +479,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   padding-top: 2%;
   border-top: 10px solid var(--dark-blue);
@@ -482,37 +490,17 @@ button:hover {
   background-repeat: 0;
   background-position: 0;
   background-size: contain;
-
-  /* background: rgb(88, 147, 212);
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(88, 147, 212, 1) 0%,
-    rgba(31, 60, 136, 1) 70%,
-    rgba(41, 43, 47, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    180deg,
-    rgba(88, 147, 212, 1) 0%,
-    rgba(31, 60, 136, 1) 70%,
-    rgba(41, 43, 47, 1) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(88, 147, 212, 1) 0%,
-    rgba(31, 60, 136, 1) 70%,
-    rgba(41, 43, 47, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5893d4",endColorstr="#292b2f",GradientType=1);
-*/
 }
 .team-container img {
-  width: 100%;
+  height: 80%;
   border-radius: 13%;
   border: 5px solid rgba(50, 133, 174, 0.3);
   margin-bottom: 2%;
 }
 .team-row {
-  padding: 12% 8%;
+  height: 50%;
+  width: 100%;
+  padding: 2%;
   display: flex;
   justify-content: space-between;
 }
@@ -523,11 +511,11 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 28%;
+  height: 100%;
 }
 .team-member p {
   text-shadow: 0px 0px 5px #ffffff;
 }
-
 /* FOOTER */
 
 .footer {
@@ -541,27 +529,6 @@ button:hover {
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
-
-  /* background: rgb(41, 43, 47);
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(41, 43, 47, 1) 0%,
-    rgba(72, 74, 80, 1) 27%,
-    rgba(78, 81, 88, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    180deg,
-    rgba(41, 43, 47, 1) 0%,
-    rgba(72, 74, 80, 1) 27%,
-    rgba(78, 81, 88, 1) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(41, 43, 47, 1) 0%,
-    rgba(72, 74, 80, 1) 27%,
-    rgba(78, 81, 88, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#292b2f",endColorstr="#4e5158",GradientType=1); */
 }
 
 .footer-right-container {
@@ -618,13 +585,23 @@ button:hover {
   .mint-content {
     padding-left: 15%;
   }
+  .mint-max {
+    font-size: 200%;
+  }
+  .mint-maxi {
+    font-size: 300%;
+  }
+  .mint-arbimaxi {
+    font-size: 400%;
+    margin-top: -15px;
+  }
   .about-content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .team-container {
-    height: 30vh;
+    height: 50vh;
   }
   .footer-right-container {
     width: 100%;
@@ -634,7 +611,7 @@ button:hover {
   }
 }
 /* MOBILE SCROLL BUTTON */
-.fa-solid {
+.mobile-button {
   position: fixed;
   color: var(--dark-blue);
   border: solid 2px var(--dark-blue-opaque);
@@ -645,4 +622,61 @@ button:hover {
   margin-left: 80vw;
   scale: 3;
   z-index: 10;
+}
+
+/* NOTIFICATONS */
+
+.notification {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  top: 14vh;
+  left: 90vw;
+  width: 25rem;
+  padding: 1.5%;
+  border-radius: 10px;
+  border: 2px solid rgba(96, 96, 96, 0.164);
+  border-color: 5px solid var(--dark-blue);
+  background-image: initial;
+  background-color: rgba(0, 0, 0, 0.368);
+  backdrop-filter: blur(30px);
+  color: rgba(206, 201, 201, 0.771);
+  text-shadow: 0px 0px 2px rgba(6, 1, 1, 0);
+  z-index: 99;
+}
+.notification h2 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  color: red;
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.243);
+}
+.notification div {
+  display: flex;
+  justify-content: center;
+  width: 15px;
+  color: rgba(170, 168, 168, 0.421);
+  box-shadow: 2px solid black;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.notification-close {
+  position: fixed;
+  bottom: 90%;
+  right: 97%;
+  background-image: initial;
+  background-color: transparent;
+  background-color: rgb(110, 110, 110);
+  backdrop-filter: blur(50px);
+  color: rgb(152, 152, 152);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.notification a {
+  text-decoration: none;
+  color: var(--bright-blue);
 }

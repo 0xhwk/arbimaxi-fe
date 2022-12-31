@@ -19,13 +19,13 @@ const Footer = () => {
           <motion.a
             whileHover={{ scale: 2 }}
             transition={{ duration: 0.5 }}
-            href="https://twitter.com/0xNugen"
+            href="https://twitter.com/Arbi_Maxi"
             className="fa-brands fa-twitter footer-socials-logo"
           ></motion.a>
           <motion.a
             whileHover={{ scale: 2 }}
             transition={{ duration: 0.5 }}
-            href="https://discord.gg/aasTeCBM"
+            href="https://discord.gg/WgTzv6sR"
             className="fa-brands fa-discord footer-socials-logo"
           ></motion.a>
         </div>

@@ -1,6 +1,6 @@
 import "../App.css";
 import Scroll from "react-scroll";
-import { tm1, tm2, tm3 } from "../Images";
+import { owen, arthur, venator, psyduck, kahel, weu } from "../Images";
 
 const Team = () => {
   const Element = Scroll.Element;
@@ -8,16 +8,30 @@ const Team = () => {
     <Element name="team" className="team-container">
       <div className="team-row">
         <div className="team-member">
-          <img src={tm1}></img>
-          <p>Baeset</p>
+          <img alt="owen" loading="lazy" src={owen}></img>
+          <p>Owen</p>
         </div>
         <div className="team-member">
-          <img src={tm2}></img>
-          <p>Baeset2</p>
+          <img alt="arthur" loading="lazy" src={arthur}></img>
+          <p>Arthur</p>
         </div>
         <div className="team-member">
-          <img src={tm3}></img>
-          <p>Baeset3</p>
+          <img alt="venator" loading="lazy" src={venator}></img>
+          <p>Venator</p>
+        </div>
+      </div>
+      <div className="team-row">
+        <div className="team-member">
+          <img alt="psyduck" loading="lazy" src={psyduck}></img>
+          <p>Psyduck</p>
+        </div>
+        <div className="team-member">
+          <img alt="kahel" loading="lazy" src={kahel}></img>
+          <p>kAHEL</p>
+        </div>
+        <div className="team-member">
+          <img alt="weu" loading="lazy" src={weu}></img>
+          <p>Weu</p>
         </div>
       </div>
     </Element>
